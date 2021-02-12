@@ -1,0 +1,17 @@
+package br.sp.academia;
+
+import java.time.LocalDate;
+
+public class Aluno {
+
+		private String nome;
+		private int peso;
+		private double altura;
+		private String genero;
+		private LocalDate dataNascimento;
+		private double nivelAtividade;
+		private double calcularImc;
+		private double calcularNcd;
+		
+		
+}

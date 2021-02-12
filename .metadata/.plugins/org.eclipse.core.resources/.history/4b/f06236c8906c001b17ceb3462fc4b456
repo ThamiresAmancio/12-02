@@ -1,0 +1,126 @@
+package br.sp.academia;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Aluno {
+
+		private String nome;
+		private int peso;
+		private double altura;
+		private String genero;
+		private LocalDate dataNascimento;
+		private double nivelAtividade;
+		private double calcularImc;
+		private double calcularNcd;
+		private String status;
+		
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+		
+		public String getNome() {
+			return this.nome;
+		}
+		
+		public void setPeso(int peso) {
+			this.peso = peso;
+		}
+		 
+		public int getPeso() {
+			return this.peso;
+		}
+		
+		public void setAltura(double altura) {
+			this.altura = altura;
+		}
+		
+		public double getAltura() {
+			return this.altura;
+		}
+		
+		public void setGenero(String genero) {
+			this.genero = genero;
+		}
+		
+		public String getGenero() {
+			if(this.genero == this.genero) {
+				return "Feminino";
+			}else {
+				return "Masculino";
+			}
+		}
+		
+		public void setDataNascimento(LocalDate dataNascimento) {
+			this.dataNascimento = dataNascimento;
+		}
+		
+		public LocalDate getDataNascimento() {
+			return this.dataNascimento;
+		}
+		
+		public int getIdade() {
+			LocalDate hoje = LocalDate.now();
+			Period periodo = Period.between(this.dataNascimento,hoje);
+			return periodo.getYears();
+		}
+		
+		public void setNivelAtividade(double nivelAtividade) {
+			this.nivelAtividade = nivelAtividade;
+		}
+		
+		 public double getNivelAtividade() {
+			return this.nivelAtividade;
+		}
+		 
+		public void setCalcularImc(double calcularImc) {
+			this.calcularImc = calcularImc;
+		}
+		
+		public double getCalcularImc() {
+			return this.peso/(this.altura*this.altura);
+		}
+		
+		public void setCalcularNcd(double calcularNcd) {
+			this.calcularNcd = calcularNcd;
+		}
+		
+		public double getCalcularNcd() {
+			double ncd = 0;
+				// man
+			if(this.genero == "Masculino") {
+				
+				if(this.getIdade() >= 18 && this.getIdade() <30) {
+					ncd = 15.3 * this.peso + 697;
+				}else if (this.getIdade() >= 31 && this.getIdade() < 61) {
+					ncd = 11.6 * this.peso + 879;
+				}else {
+					ncd = 13.5 * this.peso + 489;
+				}
+			}
+			
+			//women
+			
+			if(this.genero == this.genero) {
+				
+				if(this.getIdade() >= 18 && this.getIdade() < 30) {
+					ncd = 14.7 * this.peso +496;
+				}else if (this.getIdade() >= 31 && this.getIdade() < 61) {
+					ncd = 8.7 * this.peso + 829;
+				}
+				else {
+					ncd = 10.5 * this.peso + 596;
+				}
+			}
+			return ncd;
+			
+		}
+		
+		public void setStatus(String status) {
+			this.status = status;
+		}
+		
+		public String getStatus() {
+			return this.status;
+		}
+}

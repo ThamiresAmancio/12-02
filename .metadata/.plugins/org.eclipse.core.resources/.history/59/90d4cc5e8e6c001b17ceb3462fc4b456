@@ -1,0 +1,18 @@
+package br.sp.academia.model;
+
+import java.time.LocalDate;
+
+import br.sp.academia.Aluno;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Aluno alana = new Aluno();
+		
+		alana.setDataNascimento(LocalDate.of(2001, 9, 10));
+		System.out.println(alana.getIdade());
+
+	}
+
+}

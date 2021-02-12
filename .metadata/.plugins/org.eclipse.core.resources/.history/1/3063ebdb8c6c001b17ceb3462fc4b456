@@ -1,0 +1,14 @@
+package br.sp.academia.model;
+
+import br.sp.academia.Aluno;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Aluno alana = new Aluno();
+		
+
+	}
+
+}

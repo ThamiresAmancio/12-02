@@ -1,0 +1,36 @@
+package br.sp.academia.model;
+
+import java.time.LocalDate;
+
+import br.sp.academia.Aluno;
+
+
+public class App {
+	
+	
+
+	private static double ncd;
+
+	public static void main(String[] args) {
+
+		Aluno alana = new Aluno();
+		
+
+		alana.setAltura(1.75);
+		alana.setPeso(65);
+		alana.setDataNascimento(LocalDate.of(2001, 9, 10));
+		alana.setCalcularNcd(ncd);
+		
+		
+		System.out.println(alana.getNivelAtividade());
+		System.out.println(alana.getCalcularNcd());
+		System.out.println(alana.getIdade());
+		System.out.println(alana.getCalcularImc());
+		System.out.println(alana.getGenero());
+		System.out.println(alana.getStatus());
+		
+		
+	
+	}
+
+}
